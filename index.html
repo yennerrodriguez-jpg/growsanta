@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grow Santa Game</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f8ff;
+      margin: 0;
+    }
+
+    img {
+      width: 200px;
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="santa" src="santa.jpeg" alt="Santa">
+
+  <script>
+    const santa = document.getElementById("santa");
+    let scale = 1;
+
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "Space") {
+        scale += 0.1;
+        santa.style.transform = `scale(${scale})`;
+      }
+    });
+  </script>
+
+</body>
+</html>
